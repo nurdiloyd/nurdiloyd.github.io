@@ -23,6 +23,19 @@
         return "/projects/" + p.slug + "/";
     }
 
+    // The project's logo, or a default tile with its initial. Decorative: the name sits next to it.
+    function projectLogo(p, className) {
+        if (p.logo) {
+            var img = el("img", "logo " + className + (p.pixelLogo ? " is-pixel" : ""));
+            img.src = p.logo;
+            img.alt = "";
+            return img;
+        }
+        var tile = el("span", "logo logo-default " + className, p.name.charAt(0));
+        tile.setAttribute("aria-hidden", "true");
+        return tile;
+    }
+
     // "2024-08-21" -> "Aug 21, 2024"; anything else ("Q1 2027") is shown as written.
     function formatDate(date) {
         var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date || "");
@@ -42,6 +55,8 @@
 
         data.projects.forEach(function (p) {
             var item = el("article", "project");
+            item.appendChild(projectLogo(p, "logo-small"));
+            var body = el("div", "project-body");
 
             var head = el("div", "project-head");
             var title = el("h3");
@@ -50,9 +65,9 @@
             title.appendChild(link);
             head.appendChild(title);
             head.appendChild(el("span", "project-meta", p.kind + " · " + p.year));
-            item.appendChild(head);
-
-            item.appendChild(el("p", null, p.summary));
+            body.appendChild(head);
+            body.appendChild(el("p", null, p.summary));
+            item.appendChild(body);
 
             list.appendChild(item);
         });
@@ -153,6 +168,7 @@
         var p = data.projects[index];
 
         var intro = el("header", "project-intro");
+        intro.appendChild(projectLogo(p, "logo-large"));
         intro.appendChild(el("p", "project-meta", p.kind + " · " + p.year));
         intro.appendChild(el("h1", null, p.name));
         intro.appendChild(el("p", "project-summary", p.summary));

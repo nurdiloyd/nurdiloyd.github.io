@@ -195,8 +195,56 @@ main,
 /* Projects */
 
 .project {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
     padding: 20px 0;
     border-bottom: 1px solid var(--line);
+}
+
+.project-body {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Logos */
+
+.logo {
+    display: block;
+    flex-shrink: 0;
+    width: var(--logo-size);
+    height: var(--logo-size);
+    border-radius: 22%;
+    object-fit: cover;
+    background: var(--surface);
+}
+
+.logo.is-pixel {
+    image-rendering: pixelated;
+    object-fit: contain;
+    padding: calc(var(--logo-size) * 0.12);
+}
+
+.logo-default {
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-variation-settings: "opsz" 144;
+}
+
+.logo-small {
+    --logo-size: 48px;
+    font-size: 26px;
+}
+
+.logo-large {
+    --logo-size: 72px;
+    margin-bottom: 20px;
+    font-size: 40px;
 }
 
 .project:last-child {

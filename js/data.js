@@ -4,6 +4,9 @@
  * Project fields:
  *   slug          URL name; the project page lives at /projects/<slug>/
  *   name, kind ("macOS app", "Unity package", …), year, summary, links[{ label, url }]
+ *   logo          optional square image, e.g. "/images/logos/<slug>.png";
+ *                 projects without one get a default logo with their initial
+ *   pixelLogo     optional true for pixel-art logos, keeps them sharp when scaled
  *   details[]     optional bullet points shown on the project page
  *   media[]       optional, shown on the project page:
  *                   { type: "image", src, alt, width, height }   (width/height optional)
@@ -22,6 +25,7 @@ window.SITE_DATA = {
   projects: [
     {
       slug: "find-the-cat-nightmare",
+      logo: "/images/logos/find-the-cat-nightmare.jpg",
       name: "Find The Cat: Nightmare",
       kind: "Game",
       year: "2026",
@@ -44,6 +48,7 @@ window.SITE_DATA = {
     },
     {
       slug: "cactus",
+      logo: "/images/logos/cactus.png",
       name: "Cactus",
       kind: "macOS app",
       year: "2024",
@@ -102,6 +107,8 @@ window.SITE_DATA = {
     },
     {
       slug: "project-g",
+      logo: "/images/logos/project-g.png",
+      pixelLogo: true,
       name: "Project-G",
       kind: "Game",
       year: "2020",
