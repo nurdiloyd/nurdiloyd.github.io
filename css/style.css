@@ -138,6 +138,7 @@ main,
     border-radius: 50%;
     object-fit: cover;
     background: var(--surface);
+    filter: grayscale(1);
 }
 
 .intro h1 {
