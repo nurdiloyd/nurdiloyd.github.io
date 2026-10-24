@@ -47,6 +47,25 @@ window.SITE_DATA = {
       ]
     },
     {
+      slug: "turkish-games-connect",
+      logo: "/images/logos/turkish-games-connect.png",
+      name: "TurkishGamesConnect",
+      kind: "Website",
+      year: "2026",
+      summary:
+        "A curated gallery of Turkish video games on Steam, from indies to big hits, with what's just released and what's coming soon.",
+      details: [
+        "More than 90 Turkish games in one gallery",
+        "Recently released and coming soon sections",
+        "Search across the whole gallery",
+        "Every game links to its Steam page, so visitors can wishlist it"
+      ],
+      links: [{ label: "Website", url: "https://turkishgamesconnect.com/" }],
+      media: [
+        { type: "image", src: "/images/projects/turkish-games-connect.jpg", alt: "TurkishGamesConnect home page", width: 1440, height: 900 }
+      ]
+    },
+    {
       slug: "cactus",
       logo: "/images/logos/cactus.png",
       name: "Cactus",
