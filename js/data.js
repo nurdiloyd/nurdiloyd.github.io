@@ -1,157 +1,182 @@
 /*
- * Site content. Edit this file to add projects or releases; the page renders from it.
+ * Site content. Edit this file to add projects or releases; the pages render from it.
  *
  * Project fields:
- *   name, kind, year, summary, stack[], links[{ label, url }]
- *   media (optional): { type: "image", src, alt }  shown on hover / when opened
+ *   slug          URL name; the project page lives at /projects/<slug>/
+ *   name, kind ("macOS app", "Unity package", …), year, summary, links[{ label, url }]
+ *   details[]     optional bullet points shown on the project page
+ *   media[]       optional, shown on the project page:
+ *                   { type: "image", src, alt, width, height }   (width/height optional)
+ *                   { type: "youtube", id, title }
+ *
+ *   To add a page for a new project, copy a folder in /projects, rename it to the
+ *   new slug, and change data-project, <title> and the description in its index.html.
  *
  * Release fields:
- *   date ("YYYY-MM-DD"), project, version, notes, url
- *   status (optional): "upcoming" puts it under "Next up" with a "Soon" label.
- *   For upcoming releases, date can be an approximate string like "2026-12" or "Q1 2027".
+ *   date ("YYYY-MM-DD"), project (same as the project's name), version, url
+ *   status (optional): "upcoming" lists it first with a "Soon" label.
+ *   For upcoming releases, date can be any text, e.g. "Q1 2027" or "December 2026".
  */
 
 window.SITE_DATA = {
   projects: [
     {
+      slug: "cactus",
       name: "Cactus",
       kind: "macOS app",
       year: "2024",
       summary:
         "The simplest mind map for macOS. Multiple boards, connected nodes, child nodes, image attachments, and a flash card view for revising what you mapped.",
-      stack: ["Swift", "macOS"],
+      details: [
+        "Create and manage multiple boards",
+        "Add and connect nodes, and expand ideas with child nodes",
+        "Attach images to nodes",
+        "Flash card view",
+        "Export and import boards"
+      ],
       links: [
         { label: "Mac App Store", url: "https://apps.apple.com/ca/app/cactus-simplest-mind-map/id6550895718?mt=12" },
         { label: "Source", url: "https://github.com/nurdiloyd/Project-Mind" }
       ],
-      media: {
-        type: "image",
-        src: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dc/4b/62/dc4b6280-a86a-5942-1920-8018a8efe72d/AppIcon-0-0-85-220-0-4-0-2x-P3.png/512x512bb.png",
-        alt: "Cactus app icon",
-        contain: true
-      }
+      media: [
+        { type: "image", src: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/27/b9/ae/27b9aee1-95db-472a-e94c-b13ea41bfe1a/b6454c16-b48d-4311-b0ad-e78400e1094b_Cactus_v0.99_SS_-_4.png/800x500bb.jpg", alt: "Cactus screenshot", width: 800, height: 500 },
+        { type: "image", src: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7b/8f/f2/7b8ff2ed-dec6-19f6-66ad-2489e519eff9/31a3d116-133d-4bb3-b66b-17b7c5c93a8d_Cactus_v0.99_SS_-_3.png/800x500bb.jpg", alt: "Cactus screenshot", width: 800, height: 500 },
+        { type: "image", src: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f3/df/0b/f3df0b08-a58a-0fe5-7cf9-6b2f00267853/d9adbd3f-6bb3-4277-bd51-e6f57d46b30e_Cactus_v0.99_SS_-_5.png/800x500bb.jpg", alt: "Cactus screenshot", width: 800, height: 500 },
+        { type: "image", src: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2a/88/72/2a8872f4-0928-740f-28d4-493e4b3b5609/d36e2eba-6b0f-4ed1-88a9-1e57f2f96285_Cactus_v0.99_SS_-_2.png/800x500bb.jpg", alt: "Cactus screenshot", width: 800, height: 500 },
+        { type: "image", src: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b2/d1/ed/b2d1edfd-825b-9d37-0d36-c929e993ec6a/ad3b1976-a614-437a-aaa2-47b9bed620d2_Cactus_v0.99_SS_-_6.png/800x500bb.jpg", alt: "Cactus screenshot", width: 800, height: 500 }
+      ]
     },
     {
+      slug: "slingshot",
       name: "SlingShot",
       kind: "Unity package",
       year: "2020",
       summary:
         "A physics-based slingshot mechanic for Unity, in both 3D and 2D. Pull back, aim, release.",
-      stack: ["Unity", "C#", "Physics"],
+      details: [
+        "Works in both 3D and 2D",
+        "Physics based, and works with objects of different masses",
+        "Tested on Unity 2019.4"
+      ],
       links: [
         { label: "GitHub", url: "https://github.com/nurdiloyd/Unity-MiniPackage-SlingShot" },
         { label: "v1.1", url: "https://github.com/nurdiloyd/Unity-MiniPackage-SlingShot/releases/tag/v1.1" }
       ],
-      media: {
-        type: "image",
-        src: "https://raw.githubusercontent.com/nurdiloyd/Unity-MiniPackage-SlingShot/HEAD/Package-SlingShot/Recordings/movie_005.gif",
-        alt: "SlingShot mechanic in action"
-      }
+      media: [
+        { type: "image", src: "https://raw.githubusercontent.com/nurdiloyd/Unity-MiniPackage-SlingShot/HEAD/Package-SlingShot/Recordings/movie_005.gif", alt: "SlingShot in action" },
+        { type: "image", src: "https://raw.githubusercontent.com/nurdiloyd/Unity-MiniPackage-SlingShot/HEAD/Package-SlingShot/Recordings/movie_006.gif", alt: "SlingShot in action" }
+      ]
     },
     {
+      slug: "radial-menu-ui",
       name: "Radial Menu UI",
       kind: "Unity package",
       year: "2021",
       summary: "A small Unity package that brings radial (pie) menus to the UI.",
-      stack: ["Unity", "C#", "UI"],
       links: [
         { label: "GitHub", url: "https://github.com/nurdiloyd/Unity-MiniPackage-RadialMenuUI" },
         { label: "v1.0", url: "https://github.com/nurdiloyd/Unity-MiniPackage-RadialMenuUI/releases/tag/v1.0" }
       ]
     },
     {
+      slug: "project-g",
       name: "Project-G",
       kind: "Game",
       year: "2020",
       summary: "My graduation project: a game built in Unity.",
-      stack: ["Unity", "C#", "Game design"],
       links: [
         { label: "Gameplay video", url: "https://www.youtube.com/watch?v=Hc5s4Rs0VGI" },
         { label: "Extra video", url: "https://www.youtube.com/watch?v=NvM6EtfrpCw" },
         { label: "GitHub", url: "https://github.com/nurdiloyd/Project-G" }
       ],
-      media: {
-        type: "image",
-        src: "https://i.ytimg.com/vi/Hc5s4Rs0VGI/hqdefault.jpg",
-        alt: "Project-G gameplay video thumbnail"
-      }
+      media: [
+        { type: "youtube", id: "Hc5s4Rs0VGI", title: "Project-G gameplay video" },
+        { type: "youtube", id: "NvM6EtfrpCw", title: "Project-G extra video" }
+      ]
     },
     {
+      slug: "break-mesh",
       name: "Break Mesh",
       kind: "Unity package",
       year: "2021",
       summary: "A tiny Unity package for breaking a mesh into pieces.",
-      stack: ["Unity", "C#", "Meshes"],
       links: [{ label: "GitHub", url: "https://github.com/nurdiloyd/Unity-MiniPackage-BreakMesh" }]
     },
     {
+      slug: "facemorphine",
       name: "FaceMorphine",
       kind: "Computer vision",
       year: "2019",
       summary:
         "Morphs one face into another: facial landmarks, human-to-cat landmark mapping, Delaunay triangulation, then the morph itself.",
-      stack: ["Python", "OpenCV", "dlib"],
+      details: [
+        "Part 1: finding facial landmark points",
+        "Part 2: mapping human landmarks to a cat face",
+        "Part 3: Delaunay triangulation",
+        "Part 4: face morphing",
+        "Built with Python, dlib, OpenCV and NumPy"
+      ],
       links: [{ label: "GitHub", url: "https://github.com/nurdiloyd/FaceMorphine" }],
-      media: {
-        type: "image",
-        src: "https://raw.githubusercontent.com/nurdiloyd/FaceMorphine/HEAD/Results/three_del.jpg",
-        alt: "Delaunay triangulation over three faces"
-      }
+      media: [
+        { type: "image", src: "https://raw.githubusercontent.com/nurdiloyd/FaceMorphine/HEAD/Results/walter3.gif", alt: "One face morphing into another" },
+        { type: "image", src: "https://raw.githubusercontent.com/nurdiloyd/FaceMorphine/HEAD/Results/three_del.jpg", alt: "Delaunay triangulation over three faces" },
+        { type: "image", src: "https://raw.githubusercontent.com/nurdiloyd/FaceMorphine/HEAD/Results/landmarked_cat.jpg", alt: "Facial landmarks on a cat" }
+      ]
     },
     {
+      slug: "image-processing",
       name: "Image Processing",
       kind: "Computer vision",
       year: "2019",
       summary:
         "Segment-aware colour manipulation and histogram matching on image sequences from the DAVIS segmentation dataset.",
-      stack: ["Python", "NumPy"],
+      details: [
+        "Part 1: masking a segmented area and changing its RGB values",
+        "Part 2: histogram matching an image sequence to a target image",
+        "Part 3: histogram matching different segments to different targets using masks",
+        "Uses image sequences from the DAVIS Challenge dataset"
+      ],
       links: [{ label: "GitHub", url: "https://github.com/nurdiloyd/image_processing" }]
     }
   ],
 
   releases: [
     // Example of an upcoming release:
-    // { date: "2026-12", project: "My Next Game", version: "1.0", notes: "Launch on Steam.", url: "https://…", status: "upcoming" },
+    // { date: "2026-12", project: "My Next Game", version: "1.0", url: "https://…", status: "upcoming" },
     {
       date: "2024-08-21",
       project: "Cactus",
       version: "0.99.1",
-      notes: "Flash card view, board export and import, UI and performance updates.",
       url: "https://apps.apple.com/ca/app/cactus-simplest-mind-map/id6550895718?mt=12"
     },
     {
       date: "2024-07-17",
       project: "Cactus",
       version: "Launch",
-      notes: "First release on the Mac App Store.",
       url: "https://apps.apple.com/ca/app/cactus-simplest-mind-map/id6550895718?mt=12"
     },
     {
       date: "2021-01-28",
       project: "Radial Menu UI",
       version: "1.0",
-      notes: "First release of the radial menu package.",
       url: "https://github.com/nurdiloyd/Unity-MiniPackage-RadialMenuUI/releases/tag/v1.0"
     },
     {
       date: "2021-01-04",
       project: "SlingShot",
       version: "1.1",
-      notes: "Works with objects of different masses.",
       url: "https://github.com/nurdiloyd/Unity-MiniPackage-SlingShot/releases/tag/v1.1"
     },
     {
       date: "2020-12-21",
       project: "SlingShot",
       version: "1.0",
-      notes: "First release: 3D and 2D physics slingshot.",
       url: "https://github.com/nurdiloyd/Unity-MiniPackage-SlingShot/releases/tag/v1.0"
     },
     {
       date: "2020-07-30",
       project: "Project-G",
       version: "1.0",
-      notes: "Graduation project build.",
       url: "https://github.com/nurdiloyd/Project-G/releases/tag/v1.0"
     }
   ]

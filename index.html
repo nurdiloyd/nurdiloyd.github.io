@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nurdogan Karaman — Games, tools &amp; small apps</title>
+    <title>Nurdogan Karaman — Computer engineer &amp; game developer</title>
     <meta name="description" content="Nurdogan Karaman is a computer engineer and game developer making games, Unity packages and small apps for the Mac.">
     <meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#11110f" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#121210" media="(prefers-color-scheme: dark)">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nurdiloyd.github.io/">
-    <meta property="og:title" content="Nurdogan Karaman — Games, tools & small apps">
+    <meta property="og:title" content="Nurdogan Karaman">
     <meta property="og:description" content="Computer engineer and game developer. Games, Unity packages and small apps for the Mac.">
     <meta property="og:image" content="https://nurdiloyd.github.io/images/profile.jpg">
     <meta name="twitter:card" content="summary">
@@ -20,7 +20,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,100..900,0..100;1,9..144,100..900,0..100&family=Geist:wght@300..600&family=Geist+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Geist:wght@400..600&display=swap">
     <link rel="stylesheet" href="css/style.css">
 
     <script>
@@ -29,88 +29,33 @@
             var saved = localStorage.getItem("theme");
             if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
         } catch (e) {}
-        document.documentElement.classList.add("js");
     </script>
 </head>
 
 <body>
-    <a class="skip-link" href="#work">Skip to work</a>
-
     <header class="site-header">
-        <a class="brand" href="#top" aria-label="Nurdogan Karaman, back to top">N.&nbsp;Karaman</a>
-        <nav class="site-nav" aria-label="Sections">
-            <a href="#work">Work</a>
-            <a href="#releases">Releases</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <a class="brand" href="#top">Nurdogan Karaman</a>
         <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
         </button>
     </header>
 
     <main id="top">
-        <section class="hero">
-            <div class="hero-meta mono reveal">
-                <span id="hero-range">Index</span>
-                <a id="hero-latest" href="#releases"></a>
-            </div>
-            <p class="eyebrow mono reveal">Computer engineer &amp; game developer</p>
-            <h1 class="hero-title" aria-label="Games, tools and small apps.">Games, tools <em>&amp;</em> small&nbsp;apps.</h1>
-            <div class="hero-foot reveal">
-                <p class="lede">I’m Nurdogan Karaman. I make games in Unity, small packages for other Unity developers, and the occasional app for the Mac.</p>
-                <a class="hero-cue mono" href="#work">Selected work <span aria-hidden="true">↓</span></a>
-            </div>
+        <section class="section" id="projects" aria-labelledby="projects-title">
+            <h2 id="projects-title">Projects</h2>
+            <div class="projects" id="project-list"></div>
+            <noscript><p>See all projects on <a href="https://github.com/nurdiloyd">GitHub</a>.</p></noscript>
         </section>
 
-        <section class="section" id="work" aria-labelledby="work-title">
-            <header class="section-head reveal">
-                <span class="mono">(01)</span>
-                <h2 id="work-title">Selected work</h2>
-                <span class="mono section-count" id="work-count"></span>
-            </header>
-            <ol class="work-list" id="work-list"></ol>
-        </section>
-
-        <section class="section" id="releases" aria-labelledby="releases-title">
-            <header class="section-head reveal">
-                <span class="mono">(02)</span>
-                <h2 id="releases-title">Releases</h2>
-                <span class="mono section-count">Shipping log</span>
-            </header>
-            <div id="next-up"></div>
-            <div class="release-log" id="release-log"></div>
-        </section>
-
-        <section class="section" id="about" aria-labelledby="about-title">
-            <header class="section-head reveal">
-                <span class="mono">(03)</span>
-                <h2 id="about-title">About</h2>
-            </header>
-            <div class="about reveal">
-                <figure class="about-photo">
-                    <img src="images/profile.jpg" width="750" height="1000" alt="Nurdogan Karaman in front of red telephone boxes" loading="lazy">
-                </figure>
-                <div class="about-text">
-                    <p class="about-lead">I’m a computer engineer who ended up making <em>games</em>.</p>
-                    <p>Most of what I build sits between gameplay and tooling: mechanics packaged so other Unity developers can drop them straight into their projects, a graduation game, and Cactus, a deliberately simple mind-mapping app for the Mac.</p>
-                    <p>Earlier work went into computer vision: face morphing, segmentation and histogram matching in Python.</p>
-                    <dl class="facts">
-                        <div><dt class="mono">Focus</dt><dd>Games, Unity tooling, macOS apps</dd></div>
-                        <div><dt class="mono">Tools</dt><dd>Unity, C#, Swift, Python, OpenCV</dd></div>
-                    </dl>
+        <section class="intro" id="contact">
+            <div class="name-row">
+                <img class="avatar" src="images/avatar.jpg" width="240" height="240" alt="Nurdogan Karaman">
+                <div>
+                    <h1>Nurdogan Karaman</h1>
+                    <p class="role">Computer Engineer / Game Developer</p>
                 </div>
             </div>
-        </section>
-
-        <section class="section contact" id="contact" aria-labelledby="contact-title">
-            <header class="section-head reveal">
-                <span class="mono">(04)</span>
-                <h2 id="contact-title">Contact</h2>
-            </header>
-            <p class="contact-kicker reveal">Got a game, a tool or an idea?</p>
-            <a class="contact-big reveal" href="mailto:nurdogankaraman@hotmail.com">Say hello<span aria-hidden="true">↗</span></a>
-            <ul class="elsewhere mono reveal">
+            <ul class="pills">
                 <li><a href="mailto:nurdogankaraman@hotmail.com">Email</a></li>
                 <li><a href="https://github.com/nurdiloyd" target="_blank" rel="noopener">GitHub</a></li>
                 <li><a href="https://x.com/nurdiloyd" target="_blank" rel="noopener">X / Twitter</a></li>
@@ -119,15 +64,10 @@
         </section>
     </main>
 
-    <footer class="site-footer mono">
+    <footer class="site-footer">
         <span>© <span id="year">2026</span> Nurdogan Karaman</span>
-        <span>Set in Fraunces &amp; Geist</span>
         <a href="#top">Back to top ↑</a>
     </footer>
-
-    <div class="preview" aria-hidden="true"><img alt=""></div>
-
-    <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
