@@ -21,6 +21,28 @@
 window.SITE_DATA = {
   projects: [
     {
+      slug: "find-the-cat-nightmare",
+      name: "Find The Cat: Nightmare",
+      kind: "Game",
+      year: "2026",
+      summary:
+        "Cute cats, eerie places. A hand-drawn hidden object game set in retro-dystopian landscapes, where you find cats hidden among the static and rust.",
+      details: [
+        "Hand-drawn hidden object game",
+        "Retro-futuristic, 80s-inspired setting: rusted machines, buzzing neons and broken arcade cabinets",
+        "Single-player, for Windows and macOS",
+        "Available in 10 languages, including English, Japanese and Turkish"
+      ],
+      links: [{ label: "Steam", url: "https://store.steampowered.com/app/3777700/Find_The_Cat_Nightmare/" }],
+      media: [
+        { type: "image", src: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3777700/401d7909e8438a4d7324d6d6b4b9c5f8ba708cac/ss_401d7909e8438a4d7324d6d6b4b9c5f8ba708cac.1920x1080.jpg", alt: "Find The Cat: Nightmare screenshot", width: 1920, height: 1080 },
+        { type: "image", src: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3777700/6ab6eb48ebd39ba01883efa1a22ddd6e62bbfda0/ss_6ab6eb48ebd39ba01883efa1a22ddd6e62bbfda0.1920x1080.jpg", alt: "Find The Cat: Nightmare screenshot", width: 1920, height: 1080 },
+        { type: "image", src: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3777700/1fb978664bb05e8a862654625db178120199b05c/ss_1fb978664bb05e8a862654625db178120199b05c.1920x1080.jpg", alt: "Find The Cat: Nightmare screenshot", width: 1920, height: 1080 },
+        { type: "image", src: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3777700/f5939eb97ca0956d0053dcdcc2650901e4c4d331/ss_f5939eb97ca0956d0053dcdcc2650901e4c4d331.1920x1080.jpg", alt: "Find The Cat: Nightmare screenshot", width: 1920, height: 1080 },
+        { type: "image", src: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3777700/81e995a25aebbdc98d555a8d22daa82e83d27fd2/ss_81e995a25aebbdc98d555a8d22daa82e83d27fd2.1920x1080.jpg", alt: "Find The Cat: Nightmare screenshot", width: 1920, height: 1080 }
+      ]
+    },
+    {
       slug: "cactus",
       name: "Cactus",
       kind: "macOS app",
@@ -107,6 +129,12 @@ window.SITE_DATA = {
   releases: [
     // Example of an upcoming release:
     // { date: "2026-12", project: "My Next Game", version: "1.0", url: "https://…", status: "upcoming" },
+    {
+      date: "2026-03-09",
+      project: "Find The Cat: Nightmare",
+      version: "Launch",
+      url: "https://store.steampowered.com/app/3777700/Find_The_Cat_Nightmare/"
+    },
     {
       date: "2024-08-21",
       project: "Cactus",
