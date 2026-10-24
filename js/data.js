@@ -101,42 +101,6 @@ window.SITE_DATA = {
       year: "2021",
       summary: "A tiny Unity package for breaking a mesh into pieces.",
       links: [{ label: "GitHub", url: "https://github.com/nurdiloyd/Unity-MiniPackage-BreakMesh" }]
-    },
-    {
-      slug: "facemorphine",
-      name: "FaceMorphine",
-      kind: "Computer vision",
-      year: "2019",
-      summary:
-        "Morphs one face into another: facial landmarks, human-to-cat landmark mapping, Delaunay triangulation, then the morph itself.",
-      details: [
-        "Part 1: finding facial landmark points",
-        "Part 2: mapping human landmarks to a cat face",
-        "Part 3: Delaunay triangulation",
-        "Part 4: face morphing",
-        "Built with Python, dlib, OpenCV and NumPy"
-      ],
-      links: [{ label: "GitHub", url: "https://github.com/nurdiloyd/FaceMorphine" }],
-      media: [
-        { type: "image", src: "https://raw.githubusercontent.com/nurdiloyd/FaceMorphine/HEAD/Results/walter3.gif", alt: "One face morphing into another" },
-        { type: "image", src: "https://raw.githubusercontent.com/nurdiloyd/FaceMorphine/HEAD/Results/three_del.jpg", alt: "Delaunay triangulation over three faces" },
-        { type: "image", src: "https://raw.githubusercontent.com/nurdiloyd/FaceMorphine/HEAD/Results/landmarked_cat.jpg", alt: "Facial landmarks on a cat" }
-      ]
-    },
-    {
-      slug: "image-processing",
-      name: "Image Processing",
-      kind: "Computer vision",
-      year: "2019",
-      summary:
-        "Segment-aware colour manipulation and histogram matching on image sequences from the DAVIS segmentation dataset.",
-      details: [
-        "Part 1: masking a segmented area and changing its RGB values",
-        "Part 2: histogram matching an image sequence to a target image",
-        "Part 3: histogram matching different segments to different targets using masks",
-        "Uses image sequences from the DAVIS Challenge dataset"
-      ],
-      links: [{ label: "GitHub", url: "https://github.com/nurdiloyd/image_processing" }]
     }
   ],
 

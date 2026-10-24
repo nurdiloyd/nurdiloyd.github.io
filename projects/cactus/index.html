@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cactus — Nurdogan Karaman</title>
     <meta name="description" content="The simplest mind map for macOS. Multiple boards, connected nodes, child nodes, image attachments, and a flash card view for revising what you mapped.">
-    <meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121210" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#121210">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nurdiloyd.github.io/projects/cactus/">
@@ -23,21 +22,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Geist:wght@400..600&display=swap">
     <link rel="stylesheet" href="/css/style.css">
 
-    <script>
-        // Apply a saved theme before first paint to avoid a flash.
-        try {
-            var saved = localStorage.getItem("theme");
-            if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
-        } catch (e) {}
-    </script>
 </head>
 
 <body data-project="cactus">
     <header class="site-header">
         <a class="brand" href="/">Nurdogan Karaman</a>
-        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
-        </button>
     </header>
 
     <main id="top" class="project-page">
@@ -47,7 +36,6 @@
 
     <footer class="site-footer">
         <span>© <span id="year">2026</span> Nurdogan Karaman</span>
-        <a href="#top">Back to top ↑</a>
     </footer>
 
     <script src="/js/data.js"></script>

@@ -3,38 +3,16 @@
    ========================================================================== */
 
 :root {
-    --bg: #f3f0e8;
-    --fg: #1a1917;
-    --muted: #67625a;
-    --line: rgba(26, 25, 23, 0.12);
-    --surface: #ebe7dd;
-    --accent: #c73e18;
-
-    --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
-    --sans: "Geist", ui-sans-serif, system-ui, -apple-system, sans-serif;
-
-    color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        --bg: #121210;
-        --fg: #ebe7de;
-        --muted: #9a9488;
-        --line: rgba(235, 231, 222, 0.12);
-        --surface: #1c1b18;
-        --accent: #ff7a50;
-        color-scheme: dark;
-    }
-}
-
-:root[data-theme="dark"] {
     --bg: #121210;
     --fg: #ebe7de;
     --muted: #9a9488;
     --line: rgba(235, 231, 222, 0.12);
     --surface: #1c1b18;
     --accent: #ff7a50;
+
+    --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+    --sans: "Geist", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
     color-scheme: dark;
 }
 
@@ -136,28 +114,6 @@ main,
     font-weight: 500;
     white-space: nowrap;
     text-decoration: none;
-}
-
-.theme-toggle {
-    display: grid;
-    place-items: center;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    background: none;
-    color: var(--fg);
-    cursor: pointer;
-}
-
-.theme-toggle:hover {
-    background: var(--surface);
-}
-
-.theme-toggle svg {
-    width: 18px;
-    height: 18px;
 }
 
 /* ==========================================================================
@@ -499,10 +455,6 @@ main,
     border-top: 1px solid var(--line);
     font-size: 14px;
     color: var(--muted);
-}
-
-.site-footer a {
-    text-decoration: none;
 }
 
 /* ==========================================================================

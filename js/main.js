@@ -208,27 +208,6 @@
         root.appendChild(nav);
     }
 
-    /* ------------------------------------------------------------------
-       Theme toggle
-       ------------------------------------------------------------------ */
-
-    function setupTheme() {
-        var root = document.documentElement;
-        var systemDark = window.matchMedia("(prefers-color-scheme: dark)");
-
-        document.querySelector(".theme-toggle").addEventListener("click", function () {
-            var current = root.dataset.theme || (systemDark.matches ? "dark" : "light");
-            var next = current === "dark" ? "light" : "dark";
-            root.dataset.theme = next;
-            try {
-                localStorage.setItem("theme", next);
-            } catch (e) {}
-            document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
-                m.content = next === "dark" ? "#121210" : "#f3f0e8";
-            });
-        });
-    }
-
     document.getElementById("year").textContent = new Date().getFullYear();
 
     var projectSlug = document.body.dataset.project;
@@ -237,6 +216,4 @@
     } else {
         renderProjects();
     }
-
-    setupTheme();
 })();
