@@ -425,24 +425,6 @@ main,
     color: var(--muted);
 }
 
-.project-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    margin-top: 56px;
-    padding-top: 20px;
-    border-top: 1px solid var(--line);
-}
-
-.project-nav a {
-    text-decoration: none;
-}
-
-.project-nav .next {
-    margin-left: auto;
-    text-align: right;
-}
-
 /* Footer */
 
 .site-footer {

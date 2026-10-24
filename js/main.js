@@ -183,29 +183,16 @@
             root.appendChild(section("Details", details));
         }
 
-        var releases = data.releases.filter(function (r) { return r.project === p.name; });
+        // Only the latest shipped release; older ones stay in data.js as history.
+        var releases = data.releases
+            .filter(function (r) { return r.project === p.name && r.status !== "upcoming"; })
+            .sort(function (a, b) { return a.date < b.date ? 1 : -1; })
+            .slice(0, 1);
         if (releases.length) {
             var list = el("ol", "releases");
             renderReleases(list, releases);
             root.appendChild(section("Releases", list));
         }
-
-        // Previous / next project
-        var nav = el("nav", "project-nav");
-        nav.setAttribute("aria-label", "More projects");
-        var prev = data.projects[index - 1];
-        var next = data.projects[index + 1];
-        if (prev) {
-            var a = el("a", "prev", "← " + prev.name);
-            a.href = projectUrl(prev);
-            nav.appendChild(a);
-        }
-        if (next) {
-            var b = el("a", "next", next.name + " →");
-            b.href = projectUrl(next);
-            nav.appendChild(b);
-        }
-        root.appendChild(nav);
     }
 
     document.getElementById("year").textContent = new Date().getFullYear();
