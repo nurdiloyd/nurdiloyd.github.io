@@ -131,7 +131,7 @@ window.SITE_DATA = {
       name: "Project-G",
       kind: "Game",
       year: "2020",
-      summary: "My graduation project: a game built in Unity.",
+      summary: "Our graduation project: a game built in Unity.",
       links: [
         { label: "Gameplay video", url: "https://www.youtube.com/watch?v=Hc5s4Rs0VGI" },
         { label: "Extra video", url: "https://www.youtube.com/watch?v=NvM6EtfrpCw" },
