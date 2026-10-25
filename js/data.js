@@ -24,6 +24,32 @@
 window.SITE_DATA = {
   projects: [
     {
+      slug: "ghost-engine",
+      name: "Ghost Engine",
+      kind: "macOS app",
+      year: "2026",
+      summary:
+        "A macOS game editor with an AI built in. Describe a game in one sentence, and a few minutes later you are playing it.",
+      details: [
+        "Chat with the Architect (Claude): it writes the scene and C++ gameplay code, builds it and presses Play",
+        "Tests its own work: plays the game, checks the frames and the log, and fixes build errors",
+        "Edit by hand too, with Scene and Game views, Hierarchy, Inspector, gizmos and undo, even for a whole AI turn",
+        "Path tracing on Apple silicon",
+        "Exports games as standalone Mac apps",
+        "In beta, for macOS 26 or later, running on your own Anthropic API key"
+      ],
+      links: [
+        { label: "itch.io", url: "https://nurdi21.itch.io/ghost-engine" },
+        { label: "Demo video", url: "https://www.youtube.com/watch?v=hDC25CfawQE" }
+      ],
+      media: [
+        { type: "youtube", id: "hDC25CfawQE", title: "Ghost Engine demo" },
+        { type: "image", src: "/images/projects/ghost-engine-1.jpg", alt: "Ghost Engine screenshot", width: 1920, height: 1080 },
+        { type: "image", src: "/images/projects/ghost-engine-2.jpg", alt: "Ghost Engine screenshot", width: 1920, height: 1080 },
+        { type: "image", src: "/images/projects/ghost-engine-3.jpg", alt: "Ghost Engine screenshot", width: 1920, height: 1080 }
+      ]
+    },
+    {
       slug: "find-the-cat-nightmare",
       logo: "/images/logos/find-the-cat-nightmare.jpg",
       name: "Find The Cat: Nightmare",
@@ -123,6 +149,12 @@ window.SITE_DATA = {
   releases: [
     // Example of an upcoming release:
     // { date: "2026-12", project: "My Next Game", version: "1.0", url: "https://…", status: "upcoming" },
+    {
+      date: "2026-10-25",
+      project: "Ghost Engine",
+      version: "Beta",
+      url: "https://nurdi21.itch.io/ghost-engine"
+    },
     {
       date: "2026-03-09",
       project: "Find The Cat: Nightmare",
