@@ -93,38 +93,6 @@ window.SITE_DATA = {
       ]
     },
     {
-      slug: "slingshot",
-      name: "SlingShot",
-      kind: "Unity package",
-      year: "2020",
-      summary:
-        "A physics-based slingshot mechanic for Unity, in both 3D and 2D. Pull back, aim, release.",
-      details: [
-        "Works in both 3D and 2D",
-        "Physics based, and works with objects of different masses",
-        "Tested on Unity 2019.4"
-      ],
-      links: [
-        { label: "GitHub", url: "https://github.com/nurdiloyd/Unity-MiniPackage-SlingShot" },
-        { label: "v1.1", url: "https://github.com/nurdiloyd/Unity-MiniPackage-SlingShot/releases/tag/v1.1" }
-      ],
-      media: [
-        { type: "image", src: "https://raw.githubusercontent.com/nurdiloyd/Unity-MiniPackage-SlingShot/HEAD/Package-SlingShot/Recordings/movie_005.gif", alt: "SlingShot in action" },
-        { type: "image", src: "https://raw.githubusercontent.com/nurdiloyd/Unity-MiniPackage-SlingShot/HEAD/Package-SlingShot/Recordings/movie_006.gif", alt: "SlingShot in action" }
-      ]
-    },
-    {
-      slug: "radial-menu-ui",
-      name: "Radial Menu UI",
-      kind: "Unity package",
-      year: "2021",
-      summary: "A small Unity package that brings radial (pie) menus to the UI.",
-      links: [
-        { label: "GitHub", url: "https://github.com/nurdiloyd/Unity-MiniPackage-RadialMenuUI" },
-        { label: "v1.0", url: "https://github.com/nurdiloyd/Unity-MiniPackage-RadialMenuUI/releases/tag/v1.0" }
-      ]
-    },
-    {
       slug: "project-g",
       logo: "/images/logos/project-g.png",
       pixelLogo: true,
@@ -172,24 +140,6 @@ window.SITE_DATA = {
       project: "Cactus",
       version: "Launch",
       url: "https://apps.apple.com/ca/app/cactus-simplest-mind-map/id6550895718?mt=12"
-    },
-    {
-      date: "2021-01-28",
-      project: "Radial Menu UI",
-      version: "1.0",
-      url: "https://github.com/nurdiloyd/Unity-MiniPackage-RadialMenuUI/releases/tag/v1.0"
-    },
-    {
-      date: "2021-01-04",
-      project: "SlingShot",
-      version: "1.1",
-      url: "https://github.com/nurdiloyd/Unity-MiniPackage-SlingShot/releases/tag/v1.1"
-    },
-    {
-      date: "2020-12-21",
-      project: "SlingShot",
-      version: "1.0",
-      url: "https://github.com/nurdiloyd/Unity-MiniPackage-SlingShot/releases/tag/v1.0"
     },
     {
       date: "2020-07-30",
