@@ -39,8 +39,7 @@ window.SITE_DATA = {
         "In beta, for macOS 26 or later, running on your own Anthropic API key"
       ],
       links: [
-        { label: "itch.io", url: "https://nurdi21.itch.io/ghost-engine" },
-        { label: "Demo video", url: "https://www.youtube.com/watch?v=hDC25CfawQE" }
+        { label: "itch.io", url: "https://nurdi21.itch.io/ghost-engine" }
       ],
       media: [
         { type: "youtube", id: "hDC25CfawQE", title: "Ghost Engine demo" },
